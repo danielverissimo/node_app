@@ -6,9 +6,15 @@ pipeline {
             git 'https://github.com/danielverissimo/node_app.git'
           }
         }
+        stage('Test') {
+            steps {
+                npm install
+                npm test
+            }
+        }
         stage('Deploy') {
           steps {
-            input 'Do you approve the deployment?'
+            input 'Você aprova essa Build?'
 
             sh('docker build -t "danyelsanches/node_app:latest" .')
             sh('docker login -u danyelsanches -p "597947@003"')
