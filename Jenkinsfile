@@ -15,10 +15,10 @@ pipeline {
           steps {
             input 'Do you approve the deployment?'
 
-            docker build -t "danyelsanches/node_app:latest" .
-            docker login -u danyelsanches -p "597947@003"
-            docker push "danyelsanches/node_app:latest"
-            docker stack deploy -c docker-compose.yml node
+            sh('docker build -t "danyelsanches/node_app:latest" .')
+            sh('docker login -u danyelsanches -p "597947@003"')
+            sh('docker push "danyelsanches/node_app:latest"')
+            sh('docker stack deploy -c docker-compose.yml node')
 
           }
         }
