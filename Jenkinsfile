@@ -6,12 +6,6 @@ pipeline {
             git 'https://github.com/danielverissimo/node_app.git'
           }
         }
-        stage('Test') {
-            steps {
-                sh('npm install')
-                sh('npm test')
-            }
-        }
         stage('Deploy') {
           steps {
             input 'Você aprova essa Build?'
