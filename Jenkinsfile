@@ -1,5 +1,5 @@
 pipeline {
-
+    agent any
     stages {
         stage ('Checkout') {
           steps {
@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-            		npm install
+            	npm install
             }
         }
         stage('Deploy') {
