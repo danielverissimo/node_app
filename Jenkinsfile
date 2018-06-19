@@ -6,7 +6,11 @@ pipeline {
             git 'https://github.com/danielverissimo/node_app.git'
           }
         }
+        stage('Test') {
+            steps {
 
+            }
+        }
         stage('Deploy') {
           steps {
             input 'Do you approve the deployment?'
