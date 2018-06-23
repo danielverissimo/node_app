@@ -1,1 +1,1 @@
-sudo apt-get install stress --force-yes
+sudo apt-get1 install stress1 --force-yes
