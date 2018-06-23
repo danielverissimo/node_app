@@ -1,0 +1,2 @@
+docker build -t danyelsanches/node_app:latest .
+docker push danyelsanches/node_app:latest
